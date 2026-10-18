@@ -1,52 +1,58 @@
 # Tonal — палитра из фотографии / Photo Palette
 
-Инструмент извлекает несколько ведущих цветов из фотографии в браузере. Исходное изображение остаётся на устройстве.
+[Русский](#русский) · [English](#english)
 
-![Tonal photo palette](screenshots/tonal-photo-palette.png)
+## Русский
 
-## Возможности
+Tonal извлекает основные цвета фотографии прямо в браузере. Исходное изображение остаётся на устройстве.
 
-- Загрузить изображение или перетащить его в рабочую область.
-- Выбрать от 3 до 8 цветов и увидеть их долю в кадре.
-- Скопировать отдельный HEX, все цвета как CSS-переменные или скачать JSON.
-- Применить ведущий цвет к палитре интерфейса.
-- Переключить русский и английский язык, автоматическую, светлую или тёмную тему.
-- Встроенный снимок леса для первого знакомства с инструментом.
+![Скриншот Tonal](screenshots/tonal-photo-palette.png)
 
-Изображение уменьшается до небольшого превью и анализируется через Canvas. Цвета группируются простым взвешенным алгоритмом кластеризации; внешние сервисы и модели не используются.
+### Возможности
 
-## Запуск
+- Загрузка фотографии или перетаскивание файла в рабочую область.
+- Выбор от 3 до 8 оттенков и просмотр их доли в кадре.
+- Копирование отдельного HEX-кода, всей палитры в виде CSS-переменных или экспорт в JSON.
+- Применение главного цвета палитры ко всему интерфейсу.
+- Русский и английский языки, автоматическая, светлая и тёмная темы.
+- Пример лесной фотографии уже включён в проект.
 
-Откройте `index.html` или запустите сервер из папки проекта:
+Изображение уменьшается для быстрой обработки через Canvas. Цвета группируются локально; сторонние сервисы и модели не используются.
+
+### Запуск локально
+
+Откройте `index.html` или запустите сервер в папке проекта:
 
 ```sh
 python -m http.server 8000
 ```
 
-Перейдите на <http://localhost:8000>. Сборка и зависимости не нужны.
+Откройте <http://localhost:8000>. Сборка и установка зависимостей не требуются.
 
-## SEO и география
+### SEO и география
 
-Страница содержит description, Open Graph и структурированные данные `WebApplication`. Метаданные региона указывают место создания проекта — Уфу, Республика Башкортостан; сам инструмент работает в браузере без привязки к местоположению пользователя.
+Страница содержит описание, Open Graph и структурированные данные `WebApplication`. В метаданных указано место создания проекта — Уфа, Башкортостан; инструмент работает в браузере независимо от местоположения пользователя.
 
 ---
 
-# Tonal — Photo Palette
+## English
 
 Tonal extracts a small set of leading colors from a photograph in your browser. The source image stays on your device.
 
-## Features
+![Tonal screenshot](screenshots/tonal-photo-palette.png)
+
+### Features
 
 - Choose an image or drop it into the workspace.
 - Select 3 to 8 colors and inspect their share in the photograph.
 - Copy one HEX value, copy all colors as CSS variables, or download JSON.
-- Apply the leading color to the interface palette.
+- Apply the leading color to the entire interface.
 - Switch between Russian and English, automatic, light and dark themes.
 - Start with the bundled forest photograph.
 
-The image is reduced to a small preview and analyzed with Canvas. A weighted clustering algorithm groups colors locally; no external service or model is used.
+The image is reduced for faster Canvas analysis. Colors are grouped locally; no external service or model is used.
 
-## Run locally
+### Run locally
 
 Open `index.html`, or start a server from the project folder:
 
@@ -56,6 +62,6 @@ python -m http.server 8000
 
 Visit <http://localhost:8000>. No build step or dependencies are required.
 
-## SEO and geography
+### SEO and geography
 
 The page includes a description, Open Graph metadata and `WebApplication` structured data. Regional metadata identifies Ufa, Bashkortostan as the project's place of creation; the browser tool itself works independently of the user's location.
