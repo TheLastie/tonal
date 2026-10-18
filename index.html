@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#e7e8e1">
+  <meta name="geo.region" content="RU-BA">
+  <meta name="geo.placename" content="Ufa, Bashkortostan">
+  <meta name="description" content="Извлеките гармоничную палитру из фотографии прямо в браузере. Настройте число оттенков, скопируйте HEX или экспортируйте CSS.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tonal — палитра из фотографии">
+  <meta property="og:description" content="Локальный инструмент для анализа цвета фотографии и экспорта палитры.">
+  <meta property="og:locale" content="ru_RU">
+  <title>Tonal — палитра из фотографии</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Tonal Photo Palette","applicationCategory":"DesignApplication","operatingSystem":"Any","inLanguage":["ru","en"],"description":"Browser-based photo color analyzer. Extract, inspect, copy and export a palette without uploading the image."}</script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar wrap"><a class="brand" href="#top" aria-label="Tonal — начало страницы"><span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span>tonal</span></a><div class="top-actions"><span class="local-tag"><i></i><span data-i18n="localTag">Локальный анализ</span></span><button id="languageToggle" class="utility-button" type="button" aria-label="Switch language">EN</button><button id="themeToggle" class="utility-button theme-toggle" type="button" aria-label="Переключить тему">◐</button></div></header>
+  <main id="top" class="wrap">
+    <section class="intro"><div><p class="eyebrow"><span data-i18n="eyebrow">ЦВЕТОВАЯ ЛАБОРАТОРИЯ</span><span class="eyebrow-line"></span> 01</p><h1 data-i18n="headline">Палитра, которую<br><em>уже собрал кадр.</em></h1><p class="lead" data-i18n="lead">Найдите главные оттенки фотографии и заберите их в свой проект.</p></div><div class="intro-meta"><span data-i18n="metaTop">PIXEL ANALYSIS</span><strong>RGB <b>→</b> HEX</strong><span data-i18n="metaBottom">Изображение не покидает устройство</span></div></section>
+    <section class="studio" aria-label="Photo palette workspace">
+      <section class="image-column" aria-labelledby="imageTitle"><div class="column-head"><div><p class="column-kicker" data-i18n="imageKicker">ИСТОЧНИК</p><h2 id="imageTitle" data-i18n="imageTitle">Фотография</h2></div><button id="uploadButton" class="quiet-button" type="button"><span aria-hidden="true">＋</span><span data-i18n="choosePhoto">Выбрать фото</span></button></div>
+        <input id="fileInput" type="file" accept="image/*" hidden>
+        <div id="dropArea" class="photo-stage"><img id="photoPreview" src="samples/forest.webp" alt="Лесной кадр для разбора цвета" draggable="false"><div id="emptyDrop" class="empty-drop" hidden><span class="drop-icon" aria-hidden="true">↥</span><strong data-i18n="dropTitle">Перетащите фотографию сюда</strong><span data-i18n="dropHint">или выберите файл на устройстве</span></div><div class="photo-shade"></div><div class="photo-overlay"><span id="fileName">forest.webp</span><span id="imageDimensions">—</span></div></div>
+        <div class="image-caption"><span id="imageNote" data-i18n="sampleNote">Пример из фотодневника Lastie</span><button id="sampleButton" class="text-button" type="button" data-i18n="useSample">Вернуть пример</button></div>
+        <p class="error-message" id="errorMessage" role="status" aria-live="polite"></p>
+      </section>
+      <section class="palette-column" aria-labelledby="paletteTitle"><div class="column-head palette-head"><div><p class="column-kicker" data-i18n="paletteKicker">ИЗВЛЕЧЕНО ИЗ КАДРА</p><h2 id="paletteTitle" data-i18n="paletteTitle">Оттенки</h2></div><label class="count-control"><span data-i18n="colorCount">Цветов</span><output id="countValue" for="colorCountSlider">6</output><input id="colorCountSlider" type="range" min="3" max="8" value="6" aria-label="Количество цветов"></label></div>
+        <ol class="palette-list" id="paletteList" aria-live="polite"></ol>
+        <div class="color-spectrum" id="spectrum" aria-label="Распределение цветов в фотографии"></div>
+        <div class="palette-actions"><button id="copyCss" class="primary-button" type="button"><span data-i18n="copyCss">Скопировать CSS</span><span aria-hidden="true">⎘</span></button><button id="exportJson" class="quiet-button export-button" type="button" data-i18n="exportJson">Экспорт JSON</button></div>
+        <button id="applyTheme" class="apply-row" type="button" aria-pressed="false"><span><i class="apply-mark" aria-hidden="true"></i><span data-i18n="applyTheme">Примерить палитру на страницу</span></span><span class="switch" aria-hidden="true"><i></i></span></button>
+      </section>
+    </section>
+    <div class="privacy-line"><span class="privacy-lock" aria-hidden="true">⌑</span><span data-i18n="privacy">Фотография обрабатывается локально и не отправляется на сервер.</span><span class="privacy-resolution" data-i18n="resolution">Для быстрого анализа размер кадра уменьшается.</span></div>
+  </main>
+  <footer class="wrap footer"><span>TONAL / <span data-i18n="footer">PHOTO COLOR STUDY</span></span><span data-i18n="footerRight">Сделано в Уфе · Работает где угодно</span></footer>
+</body>
+</html>
