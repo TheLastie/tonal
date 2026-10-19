@@ -17,9 +17,10 @@
   <title>Tonal — палитра из фотографии</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="workflow.css?v=1">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Tonal Photo Palette","applicationCategory":"DesignApplication","operatingSystem":"Any","inLanguage":["ru","en"],"description":"Browser-based photo color analyzer. Extract, inspect, copy and export a palette without uploading the image."}</script>
   <script src="preview-bridge.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=2" defer></script>
 </head>
 <body>
   <header class="topbar wrap"><a class="brand" href="#top" aria-label="Tonal — начало страницы"><span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span>tonal</span></a><div class="top-actions"><span class="local-tag"><i></i><span data-i18n="localTag">Локальный анализ</span></span><button id="languageToggle" class="utility-button" type="button" aria-label="Switch language">EN</button><button id="themeToggle" class="utility-button theme-toggle" type="button" aria-label="Переключить тему">◐</button></div></header>
@@ -36,6 +37,7 @@
         <ol class="palette-list" id="paletteList" aria-live="polite"></ol>
         <div class="color-spectrum" id="spectrum" aria-label="Распределение цветов в фотографии"></div>
         <div class="palette-actions"><button id="copyCss" class="primary-button" type="button"><span data-i18n="copyCss">Скопировать CSS</span><span aria-hidden="true">⎘</span></button><button id="exportJson" class="quiet-button export-button" type="button" data-i18n="exportJson">Экспорт JSON</button></div>
+        <details class="contrast-details"><summary data-i18n="contrastTitle">Проверить читаемость текста</summary><p id="contrastSummary" class="contrast-summary" aria-live="polite"></p><ol id="contrastList" class="contrast-list"></ol></details>
         <button id="applyTheme" class="apply-row" type="button" aria-pressed="false"><span><i class="apply-mark" aria-hidden="true"></i><span data-i18n="applyTheme">Примерить палитру на страницу</span></span><span class="switch" aria-hidden="true"><i></i></span></button>
       </section>
     </section>

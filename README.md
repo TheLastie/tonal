@@ -13,6 +13,7 @@ Tonal извлекает основные цвета фотографии пря
 - Загрузка фотографии или перетаскивание файла в рабочую область.
 - Выбор от 3 до 8 оттенков и просмотр их доли в кадре.
 - Копирование отдельного HEX-кода, всей палитры в виде CSS-переменных или экспорт в JSON.
+- Проверка контраста для текста на каждом оттенке; CSS и JSON включают подходящий цвет текста и результат WCAG AA.
 - Применение палитры ко всей цветовой схеме страницы с учётом темы.
 - Русский и английский языки, автоматическая, светлая и тёмная темы.
 - Пример лесной фотографии уже включён в проект.
@@ -46,6 +47,7 @@ Tonal extracts a small set of leading colors from a photograph in your browser. 
 - Choose an image or drop it into the workspace.
 - Select 3 to 8 colors and inspect their share in the photograph.
 - Copy one HEX value, copy all colors as CSS variables, or download JSON.
+- Check text contrast for each color; CSS and JSON include a readable foreground suggestion and WCAG AA result.
 - Apply the palette across the interface while preserving contrast in both themes.
 - Switch between Russian and English, automatic, light and dark themes.
 - Start with the bundled forest photograph.
