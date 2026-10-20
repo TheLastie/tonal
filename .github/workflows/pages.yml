@@ -28,7 +28,7 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir -p _site/samples
-          cp index.html styles.css app.js favicon.svg robots.txt preview-bridge.js _site/
+          cp index.html styles.css workflow.css app.js favicon.svg robots.txt preview-bridge.js _site/
           cp -R samples/. _site/samples/
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
