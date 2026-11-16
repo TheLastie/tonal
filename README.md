@@ -56,7 +56,7 @@ The image is reduced for faster Canvas analysis. Colors are grouped locally; no 
 
 ### Run locally
 
-Live site: <https://thelastie.github.io/tonal/>. GitHub Actions republishes it whenever changes reach `main`.
+Live site: <https://lastie-folio.ru/tonal/>. GitHub Actions republishes it whenever changes reach `main`.
 
 Open `index.html`, or start a server from the project folder:
 

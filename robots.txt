@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://thelastie.github.io/tonal/sitemap.xml
+Sitemap: https://lastie-folio.ru/tonal/sitemap.xml
