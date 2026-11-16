@@ -30,6 +30,8 @@ jobs:
           mkdir -p _site/samples
           cp index.html styles.css workflow.css app.js favicon.svg robots.txt sitemap.xml preview-bridge.js _site/
           cp -R samples/. _site/samples/
+          mkdir -p _site/screenshots
+          cp screenshots/tonal-photo-palette.png _site/screenshots/
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
         with:
